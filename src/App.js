@@ -40,7 +40,7 @@ render(
     <div>
       <header>
         <Link to="/">Adopt Me!</Link>
-      </header>;
+      </header>
       <Router>
         <SearchParams path="/" />
         <Details path="/details/:id" />
