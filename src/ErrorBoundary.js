@@ -21,9 +21,9 @@ class ErrorBoundary extends Component { //or you can do it like React.Component
         return <Redirect to="/" />;
       }
     if (this.state.hasError) {
-      return (
-        <h1>
-          There was an error with this listing. <Link to="/">Click here</Link>{" "}
+      return (//if the page shows unwanted error,it will return to the main page after waiting for five seconds
+        <h1> 
+          There was an error with this listing. <Link to="/">Click here</Link>{" "} 
           to back to the home page or wait five seconds.
         </h1>
       );

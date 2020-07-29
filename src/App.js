@@ -1,8 +1,10 @@
-import React from "react";
+import React,{useState} from "react";
 import { render } from "react-dom";
 import SearchParams from "./SearchParams";
 import {Router, Link} from "@reach/router";
 import Details from "./Details";
+import ThemeContext from "./ThemeContext"
+import useDropdown from "./usedropdown";
 
 const App = () => {
 /*  return React.createElement(
@@ -36,6 +38,7 @@ render(
   document.getElementById("root")
 );
 */
+  const themeHook = useState()
   return (
     <div>
       <header>
