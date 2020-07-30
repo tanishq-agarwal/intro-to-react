@@ -3,8 +3,8 @@ import { render } from "react-dom";
 import SearchParams from "./SearchParams";
 import {Router, Link} from "@reach/router";
 import Details from "./Details";
-import ThemeContext from "./ThemeContext"
-import useDropdown from "./usedropdown";
+import ThemeContext from "./ThemeContext";
+
 
 const App = () => {
 /*  return React.createElement(
@@ -38,17 +38,19 @@ render(
   document.getElementById("root")
 );
 */
-  const themeHook = useState()
+  const theme = useState("darkblue");
   return (
-    <div>
-      <header>
-        <Link to="/">Adopt Me!</Link>
-      </header>
-      <Router>
-        <SearchParams path="/" />
-        <Details path="/details/:id" />
-      </Router>;
-    </div>
+    <ThemeContext.Provider value = {theme}>
+      <div>
+        <header>
+          <Link to="/">Adopt Me!</Link>
+        </header>
+        <Router>
+          <SearchParams path="/" />
+          <Details path="/details/:id" />
+        </Router>;
+      </div>
+    </ThemeContext.Provider>
   );
 };
 
