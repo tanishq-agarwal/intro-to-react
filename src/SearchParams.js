@@ -26,7 +26,7 @@ const SearchParams = () => {
   useEffect(() => {
     setBreeds([]);
     setBreed("");
-    pet.breeds(animal).then(({ breeds }) => {
+    pet.breeds(animal).then(({ breeds }) => { //here breeds is api which is different from the one declared above
       const breedStrings = breeds.map(({ name }) => name);
       setBreeds(breedStrings);
     }, console.error);
